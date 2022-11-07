@@ -1,6 +1,6 @@
 import React from "react";
 import {getPostsBySearch} from '../posts/postFunctions'
-import Wall_item from "./Wall_item";
+import Wall_item from "../wall/Wall_item";
 
 class SearchPage extends React.Component{
     constructor(props) {

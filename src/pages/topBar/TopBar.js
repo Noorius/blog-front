@@ -1,7 +1,7 @@
 import React from 'react';
 import SearchBar from "./SearchBar";
 import {Link} from "react-router-dom";
-import {logoutUser} from "../../users/userController";
+import {logoutUser} from "../users/userController";
 
 
 function TopBar(){
