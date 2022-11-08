@@ -8,14 +8,12 @@ function SignUp(){
     const [avatar, setAvatar] = useState({})
 
     function register({email, password, name, surname}){
-        try{
-            createUser({email, password, name, surname, avatar}).then(res => {
-                window.localStorage.setItem('token', res.data.token);
-                document.location.href = '../';
-            })
-        } catch (e){
+        createUser({email, password, name, surname, avatar}).then(res => {
+            window.localStorage.setItem('token', res.data.token);
+            document.location.href = '../';
+        }).catch((e)=>{
             setError(e.response.data.message)
-        }
+        })
     }
 
     const handleChange = e => {
@@ -62,7 +60,7 @@ function SignUp(){
                     </div>
                     <button className="ui blue button" type="submit">Register</button>
                 </form>
-                {error && <p style={{color: "red"}}>{error}</p>}
+                {error && <span style={{color: "red"}}>{error}</span>}
                 <br/><hr/><br/>
                 <Link to='/signin' className='ui green button'>Log In</Link> <span>Already have an account?</span>
             </div>
