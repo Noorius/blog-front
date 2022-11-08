@@ -17,8 +17,7 @@ export async function editPost({title, body, _id}){
         })
 }
 
-export async function getById({id}){
-    console.log(id)
+export async function getById(id){
     return await client.get(`/posts/${id}`)
 }
 

@@ -40,7 +40,7 @@ function App(){
                         <Route path="create" element={<CreatePost/>}/>
                         {/* <Route path="new" element={<NewPost />} /> */}
                     </Route>
-                    <Route path="search" element={<SearchPage/>}/>
+                    <Route path="/search" element={<SearchPage/>}/>
                 </Routes>
             </div>
         </BrowserRouter>

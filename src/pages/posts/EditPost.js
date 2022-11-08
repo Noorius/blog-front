@@ -2,7 +2,6 @@ import React, {useEffect, useState} from "react";
 import {useParams, useNavigate} from "react-router-dom";
 import PostForm from "./PostForm";
 import {editPost, getById} from "./postFunctions";
-import client from "../../client";
 
 function EditPost(){
     const navigate = useNavigate()
@@ -11,7 +10,7 @@ function EditPost(){
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        client.get(`http://localhost:3004/posts/${params.id}`)
+        getById(params.id)
             .then((res) => {
                 setObject(res.data);
                 setLoading(false);
