@@ -7,6 +7,7 @@ function SignIn(){
     const [error, setError] = useState('')
 
     function login({email, password}){
+            setError('Logging in... Wait')
             loginUser({email,password}).then(res => {
                 window.localStorage.setItem('token', res.data.token);
                 document.location.href = '../';

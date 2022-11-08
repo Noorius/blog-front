@@ -34,6 +34,7 @@ function App(){
                 <TopBar/>
                 <Routes>
                     <Route path="/" element={<Wall />} />
+                    <Route path="*" element={<Wall/>}/>
                     <Route path="/search" element={<SearchPage/>}/>
                     <Route path="/posts">
                         <Route index element={<Posts />} />

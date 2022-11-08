@@ -8,6 +8,7 @@ function SignUp(){
     const [avatar, setAvatar] = useState({})
 
     function register({email, password, name, surname}){
+        setError('Registering... Wait')
         createUser({email, password, name, surname, avatar}).then(res => {
             window.localStorage.setItem('token', res.data.token);
             document.location.href = '../';
