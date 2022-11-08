@@ -1,7 +1,7 @@
 import React from "react";
 import {faker} from "@faker-js/faker";
 
-function CommentItem({comment}){
+function CommentItem({comment, to_reply}){
 
     return(
         <div className="comment">
@@ -17,7 +17,9 @@ function CommentItem({comment}){
                     {comment.body}
                 </div>
                 <div className="actions">
-                    <a className="reply">Reply</a>
+                    <a className="reply" onClick={e=>{
+                        to_reply(comment.user.surname + " " + comment.user.name + ", ")
+                    }}>Reply</a>
                 </div>
             </div>
         </div>

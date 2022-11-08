@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from "react";
 import {Link} from "react-router-dom";
 import {createUser, getUser} from './userController'
+import './Sign.css'
 
 function SignUp(){
     const [error, setError] = useState('')
@@ -22,8 +23,8 @@ function SignUp(){
     }
 
     return(
-        <div className='ui one column centered grid middle aligned' style={{height: 650}}>
-            <div className='four wide column ui segment'>
+        <div className='parent'>
+            <div className='child'>
                 <form className="ui form"
                       encType="multipart/form-data"
                       onSubmit={(e)=>{

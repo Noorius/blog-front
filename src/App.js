@@ -7,7 +7,7 @@ import CreatePost from "./pages/posts/CreatePost";
 import SignUp from "./pages/users/SignUp";
 import SignIn from "./pages/users/SignIn";
 import Wall from "./pages/wall/Wall";
-import TopBar from "./pages/topBar/TopBar";
+import TopBar from "./pages/topBar/TopBar/TopBar";
 import SearchPage from "./pages/topBar/SearchPage";
 
 
