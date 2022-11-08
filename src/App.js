@@ -34,13 +34,13 @@ function App(){
                 <TopBar/>
                 <Routes>
                     <Route path="/" element={<Wall />} />
+                    <Route path="/search" element={<SearchPage/>}/>
                     <Route path="/posts">
                         <Route index element={<Posts />} />
                         <Route path=":id" element={<EditPost/>} />
                         <Route path="create" element={<CreatePost/>}/>
                         {/* <Route path="new" element={<NewPost />} /> */}
                     </Route>
-                    <Route path="/search" element={<SearchPage/>}/>
                 </Routes>
             </div>
         </BrowserRouter>
